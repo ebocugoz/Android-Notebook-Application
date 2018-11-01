@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="12dp"
+                android:paddingRight="10dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="#f9f9f9"
+                tools:context="com.cs310.notebook.NoteViewFragment">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/noteScrollView"
+        android:layout_alignRight="@+id/editNoteMessage"
+        android:layout_alignEnd="@+id/editNoteMessage"
+        android:layout_alignLeft="@+id/messageScrollView"
+        android:layout_alignStart="@+id/messageScrollView">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minLines="1"
+            android:layout_margin="10dp"
+
+            android:id="@+id/editNoteTitle"
+            android:inputType="text"
+            android:text="Title"/>
+    </ScrollView>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="4dp"
+
+        android:layout_marginStart="4dp"
+        android:layout_above="@+id/saveNote"
+        android:id="@+id/messageScrollView">
+
+
+    </ScrollView>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/saveNote"
+       android:text="save_note_button"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_alignRight="@+id/editNoteMessage"
+       android:layout_alignEnd="@+id/editNoteMessage"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="New Text"
+        android:id="@+id/editNoteMessage"
+        android:minLines="3"
+        android:maxLength="500"
+        android:textSize="15sp"
+        android:background="@null"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:layout_below="@+id/noteScrollView"
+        android:layout_marginBottom="50dp"
+        android:layout_alignBottom="@+id/add_photo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE NOTE"
+        android:id="@+id/delete_bttn"
+        android:layout_above="@+id/messageScrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editPhoto"
+     android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/location_button"
+        android:layout_below="@+id/add_photo"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATTACH LOCATION"
+        android:id="@+id/location_button"
+        android:layout_above="@+id/location"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/messageScrollView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD PHOTO"
+        android:id="@+id/add_photo"
+        android:layout_below="@+id/noteScrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="83dp"
+        android:layout_alignRight="@+id/location_button"
+        android:layout_alignEnd="@+id/location_button"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Location:"
+        android:id="@+id/location"
+        android:layout_above="@+id/delete_bttn"
+
+        android:layout_alignLeft="@+id/location_button"
+        android:layout_alignStart="@+id/location_button"
+        android:layout_alignRight="@+id/location_button"
+        android:layout_alignEnd="@+id/location_button"/>
+
+
+</RelativeLayout>

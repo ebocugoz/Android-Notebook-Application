@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/ScrollView01" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="10.0pt" android:gravity="center_horizontal" android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/hello" />
+        <Button android:id="@+id/Button_Simple" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/buttontext_simpleemail" android:onClick="sendSimpleEmail" />
+        <Button android:id="@+id/Button_Email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/buttontext_email" android:onClick="sendPlainTextEmail" />
+        <Button android:id="@+id/Button_Chooser" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/buttontext_simpleemail_chooser" android:onClick="chooseEmail" />
+        <Button android:id="@+id/Button_Email_Pic" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/buttontext_msg_pic" android:onClick="sendPictureMessage" />
+        <Button android:id="@+id/Button_Feedback" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/buttontext_feedback" android:onClick="launchForm" />
+    </LinearLayout>
+</ScrollView>
